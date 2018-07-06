@@ -2,7 +2,9 @@ from random import randint as r
 from time import sleep as slp
 import sl4a
 droid = sl4a.Android()
-
+version = '1.0'
+bro = 'sexta-feira 6 de julho de 2018'
+bloodX = '\033[1;31mbloodX\033[m'
 print('o======({}{}'.format('='*24, '>'))
 print('                                 DIGIPG')
 print('                                       <{}{}'.format('='*24, ')======o'))
@@ -58,6 +60,7 @@ def helpie():
     print('"sub".....................subtrair HP e MP')
     print('"create -persona".........criação de personagem')
     print('        antes crie uma pasta chamada DIGIPG no sdcard.')
+    print('"sobre"...................sobre o código')
 
 def loadice():
     droid.dialogCreateSpinnerProgress('  Rolando o dado', 'Aguarde...')
@@ -94,6 +97,10 @@ while True:
         v2 = int(input('subtração: '))
         ata = v1 - v2
         print('resultado: ', ata)
+    elif comando == 'sobre':
+        print('versão {}'.format(version))
+        print('última modificação: {}'.format(bro))
+        print('código criado por: {}'.format(bloodX))
     elif comando == 'exit':
         exit()
     elif comando == 'help':
